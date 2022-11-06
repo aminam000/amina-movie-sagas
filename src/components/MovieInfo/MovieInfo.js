@@ -38,7 +38,7 @@ function MovieInfo() {
                     <h2>{fetchInfo.title}</h2>
                     <img src={fetchInfo.poster}/>
                     <p>{fetchInfo.description}</p>
-                    <Button type='submit' variant="contained" onClick= {homePage}>Back to Home 🏡 </Button>
+                    <Button type='submit' color='primary' variant="contained" onClick= {homePage}>Back to Home 🏡 </Button>
                 </div>
                
         
