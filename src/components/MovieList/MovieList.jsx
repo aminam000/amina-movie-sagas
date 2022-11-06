@@ -15,8 +15,10 @@ function MovieList() {
     }, []);
 
     return (
+       
         <main>
             <h1>Movie Library</h1>
+            
             <section className="movies">
                 {movies.map(movie => {
                     return (
@@ -28,7 +30,9 @@ function MovieList() {
                     );
                 })}
             </section>
+           
         </main>
+       
 
     );
 }

@@ -22,3 +22,13 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+/* //tried to style it like hulu but the font wasnt available */
+
+body{
+  background-color: #666666;
+}
+
+h1 {
+color: #3dbb3d;
+}
