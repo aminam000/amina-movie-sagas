@@ -16,6 +16,31 @@ router.get('/', (req, res) => {
 
 });
 
+
+//router GET to get movies from db
+router.get('/movieInfo/:id', (req, res)=> {
+  const sqlQuery = `
+  SELECT ARRAY_AGG(genres.name) as name, movies.description as description, movies.id as id, movies.poster as poster, movies.title as title FROM movies
+  JOIN movies_genres ON movies_genres.movie_id = movies.id
+  JOIN genres ON movies_genres.genre_id = genres.id
+  WHERE movies.id = $1
+  GROUP BY movies.id;
+  `;
+
+  const sqlParams = [req.params.id]
+  pool.query(sqlQuery, sqlParams)
+  .then((response) => {
+    res.send(response.rows);
+  })
+  .catch((error)=> {
+    console.log('ERR in get db', error);
+  })
+
+});
+
+
+//router post to send to db
+
 router.post('/', (req, res) => {
   console.log(req.body);
   // RETURNING "id" will give us back the id of the created movie
