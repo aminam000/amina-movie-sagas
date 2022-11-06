@@ -2,7 +2,9 @@ import React, { useEffect } from 'react';
 import { useDispatch} from 'react-redux';
 import { useHistory } from 'react-router-dom'; 
 import { useState } from 'react';
-
+//mui imports
+import Button from '@material-ui/core/Button'
+import TextField from '@material-ui/core/TextField'
 
 function MovieItems() {
     const history = useHistory();
@@ -31,9 +33,13 @@ function MovieItems() {
    
     return (
         <div>
-            <h2>Add a movie 🎞  </h2>
-       
-              <button onClick={getMovies}> </button>
+            {/* //stretch goal to input movie
+            {/* <h2>Add a movie 🎥</h2> */}
+                {/* <form noValidate autoComplete='off' 
+                onSubmit={getMovies}>
+            
+
+                 </form> */}
         </div>
         )
     }

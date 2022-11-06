@@ -5,7 +5,7 @@ import {useEffect} from 'react';
 import { useHistory } from 'react-router-dom';
 
 
-function MovieDetails() {
+function MovieInfo() {
     const dispatch = useDispatch();
     const history = useHistory();
     const params = useParams();
@@ -27,6 +27,7 @@ function MovieDetails() {
         <div>
             <h2>Movie {params.id}</h2>
 
+
           
             <div key={fetchInfo.id}>
                     <h2>{fetchInfo.title}</h2>
@@ -40,7 +41,7 @@ function MovieDetails() {
     )
 }
 
-export default MovieDetails;
+export default MovieInfo;
 
 
 //use mui to make prettier
