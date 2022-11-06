@@ -1,6 +1,7 @@
 import {useDispatch, useSelector} from 'react-redux';
 import {useParams} from 'react-router-dom';
 import {useEffect} from 'react';
+
 import { useHistory } from 'react-router-dom';
 
 
@@ -31,7 +32,7 @@ function MovieDetails() {
                     <h2>{fetchInfo.title}</h2>
                     <img src={fetchInfo.poster}/>
                     <p>{fetchInfo.description}</p>
-                    <Button onClick= {homePage}>Home 🏡 </Button>
+                    <button onClick= {homePage}>Home 🏡 </button>
                 </div>
                
         
