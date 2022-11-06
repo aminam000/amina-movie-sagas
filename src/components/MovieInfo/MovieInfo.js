@@ -1,6 +1,11 @@
 import {useDispatch, useSelector} from 'react-redux';
 import {useParams} from 'react-router-dom';
 import {useEffect} from 'react';
+// import IconButton from '@mui/material/IconButton';
+// import Stack from '@mui/material/Stack';
+// import HomeIcon from '@mui/icons-material/Home';
+
+import Button from '@material-ui/core/Button'
 
 import { useHistory } from 'react-router-dom';
 
@@ -33,7 +38,7 @@ function MovieInfo() {
                     <h2>{fetchInfo.title}</h2>
                     <img src={fetchInfo.poster}/>
                     <p>{fetchInfo.description}</p>
-                    <button onClick= {homePage}>Home 🏡 </button>
+                    <Button type='submit' variant="contained" onClick= {homePage}>Back to Home 🏡 </Button>
                 </div>
                
         
