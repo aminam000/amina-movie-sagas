@@ -31,7 +31,8 @@ function MovieInfo() {
 
     return (
         <div>
-            <h2>Movie {params.id}</h2>
+            {/* //this is not needed  */}
+            {/* <h2>Movie {params.id}</h2> */}
 
 
           
@@ -39,6 +40,7 @@ function MovieInfo() {
                     <h2>{fetchInfo.title}</h2>
                     <img src={fetchInfo.poster}/>
                     {/* // the && will slow down and allow browseer to check for all info before rendering */}
+                    {/* //this list will display the genres */}
                     <ul>{fetchInfo.name && fetchInfo.name.map(info=> 
                     <li key={info}>
                         {info}
