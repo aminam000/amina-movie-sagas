@@ -38,6 +38,7 @@ function MovieInfo() {
             <div key={fetchInfo.id}>
                     <h2>{fetchInfo.title}</h2>
                     <img src={fetchInfo.poster}/>
+                    {/* // the && will slow down and allow browseer to check for all info before rendering */}
                     <ul>{fetchInfo.name && fetchInfo.name.map(info=> 
                     <li key={info}>
                         {info}
