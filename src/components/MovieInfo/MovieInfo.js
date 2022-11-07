@@ -37,6 +37,11 @@ function MovieInfo() {
             <div key={fetchInfo.id}>
                     <h2>{fetchInfo.title}</h2>
                     <img src={fetchInfo.poster}/>
+                    <ul>{fetchInfo.name.map(info=> 
+                    <li key={info}>
+                        {info}
+                        </li>)}
+                    </ul>
                     <p>{fetchInfo.description}</p>
 {/* 
                     //use better mui maybe? */}
