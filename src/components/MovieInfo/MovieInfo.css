@@ -1,3 +1,8 @@
-/* ul {
-    flex-wrap: wrap;
-} */
+li {
+    display: inline;
+    padding: 15px;
+    text-align: center;
+}
+div {
+    color: white;
+}
