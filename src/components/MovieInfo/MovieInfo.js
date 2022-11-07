@@ -38,7 +38,7 @@ function MovieInfo() {
             <div key={fetchInfo.id}>
                     <h2>{fetchInfo.title}</h2>
                     <img src={fetchInfo.poster}/>
-                    <ul>{fetchInfo.name.map(info=> 
+                    <ul>{fetchInfo.name && fetchInfo.name.map(info=> 
                     <li key={info}>
                         {info}
                         </li>)}
