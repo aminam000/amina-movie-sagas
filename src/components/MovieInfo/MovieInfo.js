@@ -38,6 +38,8 @@ function MovieInfo() {
                     <h2>{fetchInfo.title}</h2>
                     <img src={fetchInfo.poster}/>
                     <p>{fetchInfo.description}</p>
+{/* 
+                    //use better mui maybe? */}
                     <button onClick= {homePage}>Back to Home 🏡 </button>
                 </div>
                

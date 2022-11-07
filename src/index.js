@@ -37,8 +37,9 @@ function* fetchInfo(action) {
     const info = yield axios.get(`/api/movie/movieInfo/${action.payload}`);
     console.log('in fetch movie info', info.data);
 
-    yield put ({type: 'FETCH_INFO', payload: info.data[0]})
+    yield put ({type: 'SET_INFO', payload: info.data[0]})
 }
+
 
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
@@ -66,7 +67,7 @@ const genres = (state = [], action) => {
 //a reducer for the movie info
 const movieInfo = (state = [], action ) => {
     switch (action.type) {
-        case 'FETCH_INFO' :
+        case 'SET_INFO' :
             return action.payload;
             default:
                 return state;
