@@ -1,6 +1,7 @@
 import {useDispatch, useSelector} from 'react-redux';
 import {useParams} from 'react-router-dom';
 import {useEffect} from 'react';
+import './MovieInfo.css';
 // import IconButton from '@mui/material/IconButton';
 // import Stack from '@mui/material/Stack';
 // import HomeIcon from '@mui/icons-material/Home';
